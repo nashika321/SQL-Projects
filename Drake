@@ -1,0 +1,10 @@
+SELECT rank, song, artist, year
+FROM public."Charts"
+Where rank = 1
+and year = 2021;
+--- Where artist is Drake
+SELECT rank, song, artist, year
+FROM public."Charts"
+Where (artist = 'Drake');
+
+
