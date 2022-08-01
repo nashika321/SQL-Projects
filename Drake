@@ -5,6 +5,7 @@ and year = 2021;
 --- Where artist is Drake
 SELECT rank, song, artist, year
 FROM public."Charts"
-Where (artist = 'Drake');
+Where (year between 2010 and 2022)
+and (artist = 'Drake');
 
 
