@@ -1,0 +1,9 @@
+SELECT weeks_on_board, year, artist, song
+FROM public."weeks_on_chart"
+where song = 'All I Want For Christmas Is You' and artist = 'Mariah Carey'
+order by year desc;
+
+SELECT weeks_on_board, year, artist, song
+FROM public."weeks_on_chart"
+WHERE artist in ('Beyonce')
+order by weeks_on_board desc;
