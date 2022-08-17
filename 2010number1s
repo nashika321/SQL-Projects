@@ -1,0 +1,19 @@
+SELECT distinct
+
+-- Select the artist & song names w/ no duplicates
+
+artist, 
+
+song 
+
+FROM public."peak"
+
+-- Filter for songs that were #1 in 2010 and on
+
+WHERE peak_rank in 
+
+(SELECT rank 
+
+FROM public."rank"
+
+WHERE rank <= 1) and year >= 2010; 
