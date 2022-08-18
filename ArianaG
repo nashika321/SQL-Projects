@@ -1,0 +1,14 @@
+SELECT
+-- Select the artist, peak_rank, song names w/ no duplicates
+artist, 
+peak_rank,
+song
+FROM public."peak"
+-- Filter for Ariana Grande and songs that peak at 10 or less
+WHERE artist in 
+(SELECT r.artist
+FROM rank as r
+WHERE artist = 'Ariana Grande')
+And peak.peak_rank <= 10
+Group by peak_rank,artist,song; 
+
